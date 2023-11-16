@@ -1,0 +1,4 @@
+{
+  "log_file": "/opt/homebrew/var/log/mongodb/mongo.log",
+  "namespace": "myDB.usersCollection"
+}
