@@ -1,5 +1,14 @@
 # MongoDB LogFile Tail -f
 
+## Limitations
+- limitations are probably measured against the db system profile polling approach
+- doesn't work on the default mongodb brew service
+- stop the mongodb-community service `brew services stop mongodb-community`
+- `brew services info mongodb-community`
+- run the new service using `mongod` with some flags like `mongod -v --config /opt/homebrew/etc/mongod.conf --profile=2` (`/opt/homebrew` = `brew --prefix`)
+- could also change the profile settings using mongosh on an existing service
+  - https://stackoverflow.com/questions/15204341/mongodb-logging-all-queries
+
 ## Usecase
 - While i was using pymongo / motor to connect and run mongodb commands, I was unable to understand which line of code 
 was executing lazily and which one was actually calling the driver / querying the db 
